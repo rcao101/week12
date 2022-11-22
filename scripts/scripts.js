@@ -54,7 +54,7 @@ clickMeButton.addEventListener("click",createAddButton)
 clickMeButton.addEventListener("click",createAddPara)
 
 const buttonContainer = document.querySelector(".buttonContainer");
-buttonContainer.addEventListener("mouseover", changeBGGGreen);
+buttonContainer.addEventListener("mouseover", ChangeBGGGreen);
 
 function changeParaCol (event){
     event.target.style.color = event.target.textContent;
