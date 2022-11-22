@@ -31,11 +31,9 @@ function createAddButton ()
     const purpButton = document.createElement("button");
     purpButton.textContent = "Purple";
     purpButton.addEventListener("mouseover", ChangeBGGGreen)
-    purpButton.classList.add ("green-background");
     document.body.appendChild(purpButton)
 
 }
-clickMeButton.addEventListener("click",createAddButton)
 
 function createAddPara()
 {
@@ -45,10 +43,19 @@ function createAddPara()
     document.body.appendChild (para)
 }
 
-createAddButton.addEventListener ("click", changeText);
+clickMeButton.addEventListener ("click", changeText);
 
 function ChangeBGGGreen(event)
 {
     event.target.classList.add("green-background")   
 }
 
+clickMeButton.addEventListener("click",createAddButton)
+clickMeButton.addEventListener("click",createAddPara)
+
+const buttonContainer = document.querySelector(".buttonContainer");
+buttonContainer.addEventListener("mouseover", changeBGGGreen);
+
+function changeParaCol (event){
+    event.target.style.color = event.target.textContent;
+}
